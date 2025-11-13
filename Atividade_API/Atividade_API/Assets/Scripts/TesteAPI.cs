@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TesteAPI : MonoBehaviour
 {
     private Api apiService;
-    [SerializeField] private PlayerC playerController;
+    [SerializeField] private Player playerController;
 
     async void Start()
     {

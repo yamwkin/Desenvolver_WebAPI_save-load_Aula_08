@@ -48,7 +48,7 @@ public class Api
     {
         try
         {
-            string url = $"{BASE_URL}/player/{id}";
+            string url = $"{BASE_URL}/api/player/{id}";
             Debug.Log($"GET: {url}");
 
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -74,7 +74,7 @@ public class Api
     {
         try
         {
-            string url = $"{BASE_URL}/player/{id}";
+            string url = $"{BASE_URL}/api/player/{id}";
             Debug.Log($"PUT: {url}");
 
             string json = JsonUtility.ToJson(jogador);
@@ -104,7 +104,7 @@ public class Api
     {
         try
         {
-            string url = $"{BASE_URL}/player";
+            string url = $"{BASE_URL}/api/player";
             Debug.Log($"POST: {url}");
 
             string json = JsonUtility.ToJson(jogador);

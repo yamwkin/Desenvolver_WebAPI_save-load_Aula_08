@@ -6,7 +6,7 @@ namespace API_Aula.Controllers
     {
         public static List<Model.Player> players = new()
         {
-            new Model.Player { id = 1, Vida = 100, QuantidadeDeItens = 0, PosicaoX = 0, PosicaoY = 0, PosicaoZ = 0}
+            new Model.Player { id = "1", Vida = 100, QuantidadeDeItens = 0, PosicaoX = 0, PosicaoY = 0, PosicaoZ = 0}
         };
         [HttpGet]
         [Route("api/player")]
@@ -19,7 +19,7 @@ namespace API_Aula.Controllers
         [HttpGet]
         [Route("api/player/{id}")]
 
-        public IActionResult GetPlayer(int id)
+        public IActionResult GetPlayer(string id)
         {
             var player = players.FirstOrDefault(a => a.id == id);
             if (player == null)
@@ -40,7 +40,7 @@ namespace API_Aula.Controllers
 
         [HttpPut]
         [Route("api/player/{id}")]
-        public IActionResult UpdatePlayer(int id, [FromBody] Model.Player playerAtualizado)
+        public IActionResult UpdatePlayer(string id, [FromBody] Model.Player playerAtualizado)
         {
             var player = players.FirstOrDefault(a => a.id == id);
             if (player == null)
@@ -57,7 +57,7 @@ namespace API_Aula.Controllers
 
         [HttpDelete]
         [Route("api/player/{id}")]
-        public IActionResult DeletePlayer(int id)
+        public IActionResult DeletePlayer(string id)
         {
             var player = players.FirstOrDefault(a => a.id == id);
             if (player == null)

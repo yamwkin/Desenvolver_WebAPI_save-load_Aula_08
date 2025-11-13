@@ -37,6 +37,7 @@ public class PlayerC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         PlayerMove();
 
         PosicaoX = gameObject.transform.position.x;
@@ -59,11 +60,11 @@ public class PlayerC : MonoBehaviour
     {
         Vida = 100;
         QuantidadeDeItens = 0;
-        criadoJogador1.QuantidadeDeItens = 0;
         criadoJogador1.Vida = 100;
-        criadoJogador1.PosicaoX = 0;
-        criadoJogador1.PosicaoY = 0;
-        criadoJogador1.PosicaoZ = 0;
+        criadoJogador1.QuantidadeDeItens = 0;
+        criadoJogador1.PosicaoX = 0f;
+        criadoJogador1.PosicaoY = 0f;
+        criadoJogador1.PosicaoZ = 0f;
 
         UpdatePlayerData();
     }
@@ -80,7 +81,7 @@ public class PlayerC : MonoBehaviour
     }
 
 
-    public async void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Item"))
         {

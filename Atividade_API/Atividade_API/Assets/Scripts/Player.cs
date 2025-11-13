@@ -2,12 +2,12 @@ using UnityEngine;
 
     public class Player
     {
-        public string id { get; set; }
-        public int Vida { get; set; }
-        public int QuantidadeDeItens { get; set; }
-        public float PosicaoX { get; set; }
-        public float PosicaoY { get; set; }
-        public float PosicaoZ { get; set; }
+    public string id;
+    public int Vida;
+    public int QuantidadeDeItens;
+    public float PosicaoX;
+    public float PosicaoY;
+    public float PosicaoZ;
 
 }
 
